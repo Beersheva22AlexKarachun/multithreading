@@ -1,16 +1,15 @@
-package telran.symbolPrinter;
+package telran.printers;
 
 public class NumberPrinter extends Thread {
     private final int number;
-    private final int RUNS;
+    private int runs;
 
     public void setNextPrinter(Thread nextPrinter) {
         this.nextPrinter = nextPrinter;
     }
 
     private Thread nextPrinter;
-    private int currRun = 0;
-    private String str;
+    private String portion;
 
     public NumberPrinter(int number, int amount, int sizeOfPortion) {
         this(number, amount, sizeOfPortion, null);
@@ -18,18 +17,18 @@ public class NumberPrinter extends Thread {
 
     public NumberPrinter(int number, int amount, int sizeOfPortion, Thread nextPrinter) {
         this.number = number;
-        this.RUNS = amount / sizeOfPortion;
-        this.str = String.valueOf(number).repeat(sizeOfPortion);
+        this.runs = amount / sizeOfPortion;
+        this.portion = (number + " ").repeat(sizeOfPortion).strip();
         this.nextPrinter = nextPrinter;
     }
 
     @Override
     public void run() {
-        while (currRun++ <= RUNS) {
+        for (int i = 0; i < runs; i++) {
             try {
                 join();
             } catch (InterruptedException e) {
-                System.out.println(str);
+                System.out.println(portion);
                 nextPrinter.interrupt();
             }
         }

@@ -1,4 +1,4 @@
-package telran.symbolPrinter;
+package telran.printers;
 
 import java.io.IOException;
 import java.util.Scanner;

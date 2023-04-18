@@ -1,11 +1,11 @@
-package telran.symbolPrinter;
+package telran.printers;
 
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.Arrays;
 
 public class NumberPrinterController {
-    public static final int amountOfPrinters = 9;
+    public static final int amountOfPrinters = 3;
     public static final int amountOfNumbers = 30;
     public static final int sizeOfPortion = 10;
 

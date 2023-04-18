@@ -10,7 +10,6 @@ public class Runner extends Thread {
     private int number;
     private int[] array;
 
-
     public Runner(int number, int[] array) {
         this.number = number;
         this.array = array;

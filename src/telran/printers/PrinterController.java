@@ -1,4 +1,4 @@
-package telran.multithreading;
+package telran.printers;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

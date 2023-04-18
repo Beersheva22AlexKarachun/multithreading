@@ -1,4 +1,4 @@
-package telran.symbolPrinter;
+package telran.printers;
 
 public class SymbolPrinter extends Thread {
     private static final String DEFAULT_STRING = "HelloWorld";

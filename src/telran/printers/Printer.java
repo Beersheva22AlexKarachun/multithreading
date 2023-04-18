@@ -1,4 +1,4 @@
-package telran.multithreading;
+package telran.printers;
 
 public class Printer extends Thread {
     private String str;
